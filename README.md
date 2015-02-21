@@ -2,7 +2,7 @@
 
 > Generate mock data for Metalsmith HTML templates
 
-## Usage
+## Quickstart
 
 + Install **metalsmith-mock** with npm
 
@@ -37,3 +37,44 @@ metalsmith(__dirname)
 <span data-mock="memberId:1">981479716</span>
 <span data-mock="customerId:1">6564503975</span>
 ```
+
+## API
+
+``` js
+data-mock="mock:identityKey"
+```
+
+**metalsmith-mock** now only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout html templates.  
+
+When **metelsmith-mock** first encounters a `data-mock` attribute, it checks to see if that mock identity key has been previously defined, and if so, uses that mock identify throughout all metalsmith templates.  
+
+If the mock identify key hasn't been previously defined, a new identify is created and cached in `metal.metadata().mocks[identityKey` object.
+
+## Mock Options
+
++ fullName 
++ fullNameReverse 
++ sexShort 
++ dob 
++ memberId 
++ customerId 
++ groupNumber 
++ addressLine1 
++ addressLine2
++ sentence 
++ sentences 
++ paragraph 
++ diagnosisType 
++ procedureCode 
+
+## Authors
+
+## Disclaimer
+
+Open source software components distributed or made available in the Availity Materials are licensed to Company under the terms of the applicable open source license agreements, which may be found in text files included in the Availity Materials.
+
+## Copyright and license
+
+Code and documentation copyright 2015 Availity, LLC. Code released under [the MIT license](https://github.com/Availity/metalsmith-mock/blob/master/LICENSE).
+
+
