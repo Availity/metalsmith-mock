@@ -4,6 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://img.shields.io/david/Availity/availity-cli.svg)](https://david-dm.org/Availity/metalsmith-mock)
+[![Build Status](https://img.shields.io/travis/joyent/node.svg)](https://travis-ci.org/Availity/metalsmith-mock)
 
 
 
