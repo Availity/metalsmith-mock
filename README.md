@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&label=windows)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://img.shields.io/david/Availity/metalsmith-mock.svg?style=flat-square)](https://david-dm.org/Availity/metalsmith-mock)
-[![Linux Passing](https://img.shields.io/travis/Availity/metalsmith-mock.svg?style=flat-square&label=linux)](https://travis-ci.org/Availity/metalsmith-mock.svg?branch=master)
+[![Linux Passing](https://img.shields.io/travis/Availity/metalsmith-mock.svg?style=flat-square&label=linux)](https://travis-ci.org/Availity/metalsmith-mock)
 [![Windows Passing](https://img.shields.io/appveyor/ci/robmcguinness/metalsmith-mock.svg?style=flat-square&label=windows)](https://ci.appveyor.com/project/robmcguinness/metalsmith-mock)
 
 
