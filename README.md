@@ -8,8 +8,6 @@
 [![Windows Passing](https://img.shields.io/appveyor/ci/robmcguinness/metalsmith-mock.svg?style=flat-square&label=windows)](https://ci.appveyor.com/project/robmcguinness/metalsmith-mock)
 
 
-
-
 ## Quickstart
 
 + Install **metalsmith-mock** with npm
@@ -52,11 +50,11 @@ metalsmith(__dirname)
 data-mock="mock:identityKey"
 ```
 
-**metalsmith-mock** now only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout html templates.  
+**metalsmith-mock** not only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout html templates.  
 
-When **metelsmith-mock** first encounters a `data-mock` attribute, it checks to see if that mock identity key has been previously defined, and if so, uses that mock identify throughout all metalsmith templates.  
+When **metalsmith-mock** first encounters a `data-mock` attribute, it checks to see if that mock identity key has been previously defined and if so, uses that mock identify throughout all metalsmith templates.  
 
-If the mock identify key hasn't been previously defined, a new identify is created and cached in `metal.metadata().mocks[identityKey` object.
+If the mock identify key hasn't been previously defined, a new identify is created and cached in `metal.metadata().mocks[identityKey]` object.
 
 ## Mock Options
 
@@ -72,6 +70,7 @@ If the mock identify key hasn't been previously defined, a new identify is creat
 + sentence 
 + sentences 
 + paragraph 
++ paragraphs 
 + diagnosisType 
 + procedureCode 
 
