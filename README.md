@@ -12,14 +12,12 @@
 
 + Install **metalsmith-mock** with npm
 
->
 ``` bash
   npm install metalsmith-mock --save-dev
 ```
 
 + Add `data-mock` attributes to html
 
->
 ``` html
 <span data-mock="memberId:1"></span>
 <span data-mock="customerId:1"></span>
@@ -27,7 +25,6 @@
 
 + Add `metalsmith-mock` plugin to metalsmith
 
->
 ``` js
 const metalsmith = require('metlasmith');
 const metalsmithMock = require('metalsmith-mock');
@@ -38,7 +35,6 @@ metalsmith(__dirname)
 
 ## Output
 
->
 ``` html
 <span data-mock="memberId:1">981479716</span>
 <span data-mock="customerId:1">6564503975</span>
@@ -47,7 +43,7 @@ metalsmith(__dirname)
 ## API
 
 ``` html
-data-mock="mock:identityKey"
+<div data-mock="mock:identityKey"></div>
 ```
 
 **metalsmith-mock** not only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout HTML templates.  
