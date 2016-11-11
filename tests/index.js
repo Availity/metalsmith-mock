@@ -1,37 +1,40 @@
+'use strict';
+
 /* global describe, it */
 
-var chai = require('chai');
-var metalsmith = require('metalsmith');
-var metalsmithMock = require('../lib');
-var cheerio = require('cheerio');
-var fs = require('fs');
-var path = require('path');
-var expect = chai.expect;
+const chai = require('chai');
 
-describe('metalsmith-mock', function() {
+const metalsmith = require('metalsmith');
+const metalsmithMock = require('../lib');
+const cheerio = require('cheerio');
+const fs = require('fs');
+const path = require('path');
+const expect = chai.expect;
 
-  it('should create mock data', function(done){
+describe('metalsmith-mock', () => {
 
-    var metal = metalsmith(path.join(__dirname, 'fixtures'));
+  it('should create mock data', done => {
+
+    const metal = metalsmith(path.join(__dirname, 'fixtures'));
 
     metal
       .use(metalsmithMock())
-      .build(function(err){
+      .build(err => {
 
-        if(err) {
+        if (err) {
           return done(err);
         }
 
-        var contents = fs.readFileSync(path.join(__dirname, 'fixtures/build/index.html'), "utf8");
-        var $ = cheerio.load(contents);
+        const contents = fs.readFileSync(path.join(__dirname, 'fixtures/build/index.html'), 'utf8');
+        const $ = cheerio.load(contents);
 
-        var mocks = $('[data-mock]');
+        const mocks = $('[data-mock]');
 
-        var actual0 = $(mocks[0]).text();
-        var actual1 = $(mocks[1]).text();
+        const actual0 = $(mocks[0]).text();
+        const actual1 = $(mocks[1]).text();
 
-        expect(metal.metadata().mocks['_1'].memberId).to.be.equal(actual0);
-        expect(metal.metadata().mocks['_1'].customerId).to.be.equal(actual1);
+        expect(metal.metadata().mocks._1.memberId).to.be.equal(actual0);
+        expect(metal.metadata().mocks._1.customerId).to.be.equal(actual1);
 
         done();
       });
