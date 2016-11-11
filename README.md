@@ -29,8 +29,8 @@
 
 >
 ``` js
-var metalsmith = require('metlasmith');
-var metalsmithMock = require('metalsmith-mock');
+const metalsmith = require('metlasmith');
+const metalsmithMock = require('metalsmith-mock');
 metalsmith(__dirname)
   .use(metalsmithMock())
   .build();
@@ -46,11 +46,11 @@ metalsmith(__dirname)
 
 ## API
 
-``` js
+``` html
 data-mock="mock:identityKey"
 ```
 
-**metalsmith-mock** not only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout html templates.  
+**metalsmith-mock** not only allows for the dynamic creation of mock data but also the reuse of the mock data identities throughout HTML templates.  
 
 When **metalsmith-mock** first encounters a `data-mock` attribute, it checks to see if that mock identity key has been previously defined and if so, uses that mock identify throughout all metalsmith templates.  
 
@@ -85,6 +85,6 @@ Open source software components distributed or made available in the Availity Ma
 
 ## Copyright and license
 
-Code and documentation copyright 2015 Availity, LLC. Code released under [the MIT license](https://github.com/Availity/metalsmith-mock/blob/master/LICENSE).
+Code and documentation copyright 2016 Availity, LLC. Code released under [the MIT license](https://github.com/Availity/metalsmith-mock/blob/master/LICENSE).
 
 
