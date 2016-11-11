@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-mock",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Generate mock data for Metalsmith HTML templates",
   "main": "lib/index.js",
   "scripts": {
